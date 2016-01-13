@@ -1,0 +1,49 @@
+@aj [1] ~> stack build
+There were multiple candidates for the Cabal entry "test.hs" (/home/aj/Desktop/delme/yesod/yesod-core/test.hs), picking /home/aj/Desktop/delme/yesod/yesod-core/test/test.hs
+yesod-core-1.4.18.1: unregistering (local file changes: Yesod/Routes/TH/Dispatch.hs)
+yesod-core-1.4.18.1: build
+There were multiple candidates for the Cabal entry "test.hs" (/home/aj/Desktop/delme/yesod/yesod-core/test.hs), picking /home/aj/Desktop/delme/yesod/yesod-core/test/test.hs
+yesod-core-1.4.18.1: copy/register
+delme-0.0.0: configure
+delme-0.0.0: build
+Complete
+--  While building package delme-0.0.0 using:
+      /home/aj/.stack/setup-exe-cache/x86_64-linux/setup-Simple-Cabal-1.22.5.0-ghc-7.10.3 --builddir=.stack-work/dist/x86_64-linux/Cabal-1.22.5.0 build exe:delme --ghc-options " -ddump-hi -ddump-to-file"
+    Process exited with code: ExitFailure 1
+    Logs have been written to: /home/aj/Desktop/delme/delme/.stack-work/logs/delme-0.0.0.log
+
+    Configuring delme-0.0.0...
+    Preprocessing executable 'delme' for delme-0.0.0...
+    [4 of 6] Compiling Home             ( Home.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/delme/delme-tmp/Home.o )
+    [5 of 6] Compiling Application      ( Application.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/delme/delme-tmp/Application.o ) [TH]
+
+    /home/aj/Desktop/delme/delme/Application.hs:12:1:
+        Couldn't match expected type ‘Route HelloSub -> Route App’
+                    with actual type ‘Route App’
+        Possible cause: ‘SubR’ is applied to too many arguments
+        In the third argument of ‘\ parentRunner_aioU
+                                    getSub_aioV
+                                    toParent_aioW
+                                    env_aioX
+                                    -> yesodSubDispatch
+                                         (Yesod.Core.Types.YesodSubRunnerEnv
+                                            {Yesod.Core.Types.ysreParentRunner = parentRunner_aioU,
+                                             Yesod.Core.Types.ysreGetSub = getSub_aioV,
+                                             Yesod.Core.Types.ysreToParentRoute = toParent_aioW,
+                                             Yesod.Core.Types.ysreParentEnv = env_aioX})’, namely
+          ‘SubR SubsiteNotOkR’
+        In the expression:
+          \ parentRunner_aioU getSub_aioV toParent_aioW env_aioX
+            -> yesodSubDispatch
+                 (Yesod.Core.Types.YesodSubRunnerEnv
+                    {Yesod.Core.Types.ysreParentRunner = parentRunner_aioU,
+                     Yesod.Core.Types.ysreGetSub = getSub_aioV,
+                     Yesod.Core.Types.ysreToParentRoute = toParent_aioW,
+                     Yesod.Core.Types.ysreParentEnv = env_aioX})
+            yesodRunner
+            (\ sub_aioY -> getHelloSub sub_aioY)
+            (SubR SubsiteNotOkR)
+            env3915_aioG
+            (\ p_aioS r_aioT
+               -> r_aioT {wai-3.0.5.0:Network.Wai.Internal.pathInfo = p_aioS}
+               restPath_aioR req3915_aioH)

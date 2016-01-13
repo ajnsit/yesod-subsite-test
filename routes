@@ -1,0 +1,4 @@
+/              HomeR GET
+/ok SubsiteOkR HelloSub getHelloSub
+/sub SubR:
+  /notok SubsiteNotOkR HelloSub getHelloSub
